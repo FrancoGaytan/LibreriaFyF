@@ -1,0 +1,11 @@
+{% extends 'baseCliente.html' %}
+
+    {% block contenido %}
+
+    <form class="home-form">
+        <p><a href="{{url_for('mostrarlibrosCliente')}}"><img src="static/img/BuscLibros.jpg" width="360" height="46" onmouseover = "this.style.opacity=0.75;this.filters.alpha.opacity=60" onmouseout="this.style.opacity=1;this.filters.alpha.opacity=50"/></a></p>
+        <p><a href="{{url_for('mostrarCompras')}}"><img src="static/img/compRealizadas.jpg" width="360" height="46" onmouseover = "this.style.opacity=0.75;this.filters.alpha.opacity=60" onmouseout="this.style.opacity=1;this.filters.alpha.opacity=50"/></a></p>
+        
+
+    </form>
+    {% endblock %}

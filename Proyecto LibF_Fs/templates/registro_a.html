@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block contenido %}
+
+
+<form action="/registro_autores" method= 'POST'>
+        <input type="text" name="nombre_autor" placeholder="Nombre del autor" required/>
+        <input type="text" name="apellido_autor" placeholder="Apellido del autor" required/>
+	    <input type="date" name="fecha_nacimiento_autor" placeholder="Fecha de nacimiento del autor" required/>
+        <input type="text" name="nacionalidad_autor" placeholder="Nacionalidad del autor" required/>
+        <button type="submit">
+            Registrar autor
+        </button>
+</form>
+
+{% endblock %}

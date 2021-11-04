@@ -1,0 +1,32 @@
+{% extends 'baseEmpleado.html' %}
+
+{% block contenido %}
+
+    <form class="register-form">
+                
+        </form>
+        <form class="redirect-form">
+        <p><a href="{{url_for('registroLibros')}}"><img src="static/img/RegLibro.png" width="360" height="46" onmouseover = "this.style.opacity=0.75;this.filters.alpha.opacity=60" onmouseout="this.style.opacity=1;this.filters.alpha.opacity=50"/></a></p>
+        <p><a href="{{url_for('registroProveedores')}}"><img src="static/img/RegProveedor.png" width="360" height="46" onmouseover = "this.style.opacity=0.75;this.filters.alpha.opacity=60" onmouseout="this.style.opacity=1;this.filters.alpha.opacity=50"/></a></p>
+        <p><a href="{{url_for('registroCategorias')}}"><img src="static/img/RegCategoria.png" width="360" height="46" onmouseover = "this.style.opacity=0.75;this.filters.alpha.opacity=60" onmouseout="this.style.opacity=1;this.filters.alpha.opacity=50"/></a></p>
+        <p><a href="{{url_for('registroAutores')}}"><img src="static/img/RegAutor.png" width="360" height="46" onmouseover = "this.style.opacity=0.75;this.filters.alpha.opacity=60" onmouseout="this.style.opacity=1;this.filters.alpha.opacity=50"/></a></p>
+        <p><a href="{{url_for('registroEditoriales')}}"><img src="static/img/RegEditorial.png" width="360" height="46" onmouseover = "this.style.opacity=0.75;this.filters.alpha.opacity=60" onmouseout="this.style.opacity=1;this.filters.alpha.opacity=50"/></a></p>
+        <p><a href="{{url_for('mostrarlibros')}}"><img src="static/img/ListLibro.png" width="360" height="46" onmouseover = "this.style.opacity=0.75;this.filters.alpha.opacity=60" onmouseout="this.style.opacity=1;this.filters.alpha.opacity=50"/></a></p>
+        <p><a href="{{url_for('mostrarConsultas')}}"><img src="static/img/ComentariosClientes.png" width="360" height="46" onmouseover = "this.style.opacity=0.75;this.filters.alpha.opacity=60" onmouseout="this.style.opacity=1;this.filters.alpha.opacity=50"/></a></p>
+      
+   
+        <button type="submit"> 
+        
+            Registro de Proveedores 
+        </button>
+
+        <button type="submit"> 
+            Control de Stock
+        </button>
+        
+        <button type="submit"> 
+            Ventas Realizadas
+        </button>
+    </form>
+    
+{% endblock %}

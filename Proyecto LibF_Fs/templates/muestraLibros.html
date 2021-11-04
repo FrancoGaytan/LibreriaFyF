@@ -1,0 +1,28 @@
+{% extends 'baseMuestra.html' %}
+
+{% block contenido %}
+
+<link rel="stylesheet" href="https://bootswatch.com/4/materia/bootstrap.min.css">
+
+
+     <table border="1">
+          <tr>
+               <td><b>Nombre del libro</b></td>
+               <td><b>Fecha de publicacion</b></td>
+               <td><b>Autor</b></td>
+               <td><b>Categoria</b></td>
+               <td><b>Editorial</b></td>
+               
+          </tr>
+{% for libro in libros %}
+          <tr>
+               <td>{{libro.1}}</td>
+               <td>{{libro.2}}</td>
+               <td>{{libro.3}}</td>
+               <td>{{libro.4}}</td>
+               <td>{{libro.5}}</td>
+          </tr>
+{% endfor %}	
+
+
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block contenido %}
+    <form action="/registro_cliente" method= 'POST'>
+
+        <input type="text" name="nombre_cli" placeholder="nombre" required>
+        <input type="text" name="apellido_cli" placeholder="apellido" required>
+        <input type="text" name="email_cli" placeholder="email" required>
+        <input type="text" name="usuario_cli" placeholder="usuario" required>
+        <input type="password" name="contraseña_cli" placeholder="contraseña" required>
+        <button type="submit">
+            registrar
+        </button>
+    </form>
+{% endblock %}

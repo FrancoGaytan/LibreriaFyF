@@ -1,0 +1,24 @@
+{% extends 'baseMuestra.html' %}
+
+{% block contenido %}
+
+<link rel="stylesheet" href="https://bootswatch.com/4/materia/bootstrap.min.css">
+
+
+     <table border="1">
+          <tr>
+               <td><b>Fecha de la compra</b></td>
+               <td><b>Libro comprado</b></td>
+               <td><b>Precio total de la compra</b></td>
+               
+          </tr>
+{% for compra in compras %}
+          <tr>
+               <td>{{compra.1}}</td>
+               <td>{{compra.2}}</td>
+               <td>{{compra.3}}</td>
+          </tr>
+{% endfor %}	
+
+
+{% endblock %}

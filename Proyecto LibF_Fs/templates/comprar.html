@@ -1,0 +1,16 @@
+{% extends 'baseCliente.html' %}
+
+{% block contenido %}
+    <h2>Seleccione el libro a comprar y luego elija "comprar"</h2>
+    <form action="/comprarLibro" method= 'POST'>
+
+        <select name="libros_Compra" placeholder="Elija el libro" required>
+        {% for libro in librosCom %}
+            <option value= '{{libro.0}}'> {{libro.0}}, Precio: {{libro.1}} </option>
+        {% endfor %}
+        </select>
+        <p><button type="submit">
+            Comprar
+        </button></p>
+    </form>
+{% endblock %}

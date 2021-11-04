@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block contenido %}
+    <form action="/registro_empleado" method= 'POST'>
+
+        <input type="text" name="nombre_emp" placeholder="nombre" required>
+        <input type="text" name="apellido_emp" placeholder="apellido" required>
+        <input type="text" name="email_emp" placeholder="email" required>
+        <input type="text" name="usuario_emp" placeholder="usuario" required>
+        <input type="password" name="contraseña_emp" placeholder="contraseña" required>
+        <button type="submit" onclick = <a href="{{url_for('homeEmpleado')}}"></a>
+            registrar 
+        </button>
+        
+    </form>
+{% endblock %}

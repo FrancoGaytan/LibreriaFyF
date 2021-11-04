@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block contenido %}
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <ul>
+        {% for message in messages %}
+            <p style="color:red;">{{message}}</p>
+        {% endfor %}
+    </ul>
+    {% endif %}
+{% endwith %}
+ 
+<div class="container">        
+    <form method="POST" action="/login_empleado">
+        <div class="mb-3">
+            <label for="usuario_emp" class="form-label">Usuario</label>
+            <input name ="usuario_emp" type="text" class="form-control" id="usuario_emp" aria-describedby="usuario_emp">
+            <div id="emailHelp" class="form-text"></div>
+        </div>
+        <div class="mb-3">
+            <label for="contrasela_emp" class="form-label">Contraseña</label>
+            <input name ="contraseña_emp" type="password" class="form-control" id="contrasela_emp">
+        </div>
+        <button type="submit" class="btn btn-primary">INGRESAR</button>
+        <p class="message">Eres nuevo? <a href="{{url_for('registroEmpleado')}}">Registrate aquí</a></p>
+    </form>
+</div>
+{% endblock %}
+

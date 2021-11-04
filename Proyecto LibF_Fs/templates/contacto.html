@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block contenido %}
+    <h1> Consultas y comentarios </h1>
+    <form action="/contacto" method= 'POST'>   
+        <textarea name="comentarios" rows="10" cols="64" placeholder="Ingrese su consulta/comentario aquí" required></textarea>		
+        <button type="submit">
+            Enviar comentarios
+        </button>
+    </form>
+	<b>
+    <hr><p style="text-align:left">Nuestra dirección</p>
+	<p style="text-align:right">España 270 - Rosario, Argentina</p>
+    <hr><p style="text-align:left">Nuestro teléfono</p>
+	<p style="text-align:right">0341-4268426</p>
+	</b>
+{% endblock %}

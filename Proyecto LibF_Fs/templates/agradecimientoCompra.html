@@ -1,0 +1,16 @@
+{% extends 'baseCliente.html' %}
+
+{% block contenido %}
+
+    <form class="register-form">
+                
+        <p class="message">Gracias por tu compra, por favor dirigirse al mostrador para realizar el pago</p><!--sacar todos estos p-->
+    </form>
+        <form class="redirect-form">
+            <h2>Gracias por tu compra</h2>
+            <h3>por favor dirigirse al mostrador para realizar el pago</h3>
+        <p><a href="{{url_for('homeCliente')}}"><img src="static/img/retHome.png" width="360" height="46" onmouseover = "this.style.opacity=0.75;this.filters.alpha.opacity=60" onmouseout="this.style.opacity=1;this.filters.alpha.opacity=50"/></a></p>
+        <p><a href="{{url_for('mostrarlibros')}}"><img src="static/img/otraCompra.png" width="360" height="46" onmouseover = "this.style.opacity=0.75;this.filters.alpha.opacity=60" onmouseout="this.style.opacity=1;this.filters.alpha.opacity=50"/></a></p>
+    </form>
+    
+{% endblock %}

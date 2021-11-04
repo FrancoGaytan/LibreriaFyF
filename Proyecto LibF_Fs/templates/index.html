@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block contenido %}
+    <form class="register-form">
+            
+        <p class="message">Bienvenido</p>
+        </form>
+        <form class="redirect-form">
+        <p><a href="{{url_for('ingresoCliente')}}"><img src="static/img/IngCliente.png" width="360" height="46" onmouseover = "this.style.opacity=0.75;this.filters.alpha.opacity=60" onmouseout="this.style.opacity=1;this.filters.alpha.opacity=50"/></a></p>
+        <p><a href="{{url_for('ingresoEmpleado')}}"><img src="static/img/IngEmpleado.png" width="360" height="46" onmouseover = "this.style.opacity=0.75;this.filters.alpha.opacity=60" onmouseout="this.style.opacity=1;this.filters.alpha.opacity=50"/></a></p>
+        <p class="message">Bienvenido </p>
+        </form>
+{% endblock %}

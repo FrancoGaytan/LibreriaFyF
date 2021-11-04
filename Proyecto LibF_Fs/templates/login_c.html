@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block contenido %}
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <ul>
+        {% for message in messages %}
+            <p style="color:red;">{{message}}</p>
+        {% endfor %}
+    </ul>
+    {% endif %}
+{% endwith %}
+<div class="container">        
+    <form method="POST" action="/login_cliente">
+        <div class="mb-3">
+            <label for="usuario_cli" class="form-label">Usuario</label>
+            <input name ="usuario_cli" type="text" class="form-control" id="usuario_cli" aria-describedby="usuario_cli">
+            <div id="emailHelp" class="form-text"></div>
+        </div>
+        <div class="mb-3">
+            <label for="contrasela_cli" class="form-label">Contraseña</label>
+            <input name ="contraseña_cli" type="password" class="form-control" id="contrasela_cli">
+        </div>
+        <button type="submit" class="btn btn-primary">INGRESAR</button>
+        <p class="message">Eres nuevo? <a href="{{url_for('registroCliente')}}">Registrate aquí</a></p>
+    </form>
+</div>
+
+
+{% endblock %}

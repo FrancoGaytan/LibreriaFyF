@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block contenido %}
+
+
+<form action="/registro_libros/" method= 'POST'>
+        <input type="text" name="nombre_libro" placeholder="Nombre del Libro" required/>
+        <input type="date" name="fecha_publicacion_libro" placeholder="Fecha de Publicacion" required/>
+	<input type="text" name="nombre_autor_libro" placeholder="Autor" required/>
+        <input type="text" name="apellido_autor_Libro" placeholder="Apellido Autor" required/>
+        <input type="text" name="editorial_libro" placeholder="Editorial" required/>
+        <input type="text" name="categoria_libro" placeholder="Categoria" required/>
+        <input type="text" name="stock_libro" placeholder="Stock inicial" required/>
+	<button type="submit" onclick = <a href="{{url_for('homeEmpleado')}}"></a>
+            Registrar Libro
+        </button>
+</form>
+
+{% endblock %}
